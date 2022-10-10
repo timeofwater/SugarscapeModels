@@ -1,0 +1,158 @@
+<html><head><meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor/dist/index.css"/><script src="https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor/dist/js/i18n/zh_CN.js"></script><script src="https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor/dist/method.min.js"></script></head><body style="width: 1075px;"><div class="vditor-reset" id="preview"><h1 id="背景介绍">背景介绍<a id="vditorAnchor-背景介绍" class="vditor-anchor" href="#背景介绍"><svg viewBox="0 0 16 16" version="1.1" width="16" height="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p>糖域模型 Sugarscape models是一个遵循简单规则的基于主体的模型，用于人工智能、基于主体建模以及社会仿真等领域，在约书亚·爱泼斯坦 Joshua M. Epstein和罗伯特·阿克斯特尔 Robert<br />
+Axtell一起出版的书籍<a href="https://archive.org/details/growingartificia00epst/page/224">《如何创造人工社会》Growing Artificial Societies</a>中有详细介绍。</p>
+<h1 id="基本规则">基本规则<a id="vditorAnchor-基本规则" class="vditor-anchor" href="#基本规则"><svg viewBox="0 0 16 16" version="1.1" width="16" height="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<h3 id="1-糖域">1.<span id="2-1">糖域</span><a id="vditorAnchor-1-糖域" class="vditor-anchor" href="#1-糖域"><svg viewBox="0 0 16 16" version="1.1" width="16" height="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ol>
+<li>场地尺寸为50 x 50的正方形。</li>
+<li><a href="#2-2">方糖</a> 和 <a href="#2-3">糖人</a> 可以生成于其上。</li>
+<li>相同场地的方糖产出数量不变。</li>
+<li>可以产出方糖的场地，若场地当前未被糖人占领，则当前方糖不变。</li>
+</ol>
+<h3 id="2-方糖">2.<span id="2-2">方糖</span><a id="vditorAnchor-2-方糖" class="vditor-anchor" href="#2-方糖"><svg viewBox="0 0 16 16" version="1.1" width="16" height="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ol>
+<li>资源， <a href="#2-3">糖人</a> 需要持续获取才能满足自身存活条件。</li>
+<li>方糖由场地固定产出。</li>
+<li>方糖只有两种状态，即 <strong>产出</strong> 和 <strong>被拾取</strong>。</li>
+</ol>
+<h3 id="3-糖人">3.<span id="2-3">糖人</span><a id="vditorAnchor-3-糖人" class="vditor-anchor" href="#3-糖人"><svg viewBox="0 0 16 16" version="1.1" width="16" height="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ol>
+<li>生存者，每回合均需要获取资源。</li>
+<li>回合结算时未获取到所需数量的 <a href="#2-2">方糖</a> 则死亡。</li>
+<li>糖人只有两种状态，即 <strong>存货</strong> 和 <strong>死亡</strong>。</li>
+<li>糖人可以搜寻到自身 <strong>视力</strong> 范围内的方糖。</li>
+<li>糖人会自动朝 <strong>视力</strong> 范围内的，方糖数量最多的 <a href="#2-1">场地</a> 移动。
+<ol>
+<li>每个糖人的视力为范围内随机生成。</li>
+<li>视力范围为十字形。</li>
+<li>视力数值表示十字臂长（不含中心）。</li>
+<li>移动方式为回合结算时瞬间移动。</li>
+</ol>
+</li>
+</ol>
+<h3 id="4-回合">4.回合<a id="vditorAnchor-4-回合" class="vditor-anchor" href="#4-回合"><svg viewBox="0 0 16 16" version="1.1" width="16" height="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
+<ol>
+<li>
+<p>总体流程控制</p>
+<ol>
+<li>开始阶段
+<ol>
+<li>生成空白场地。</li>
+<li>生成方糖分布。</li>
+<li>生成初始糖人。</li>
+<li>糖人获取场地上的方糖。</li>
+</ol>
+</li>
+<li>演绎阶段
+<ol>
+<li>遍历所有存活糖人，寻找视力范围内糖多于当前的场地进行移动。</li>
+<li>糖人持有方糖增加当前场地的产出数量个。</li>
+<li>遍历所有存活糖人是否满足需求，将不满足者置死。</li>
+<li>输出此回合的初始糖人位置、死亡糖人位置、剩余糖人位置、方糖在场地上的分布。</li>
+<li>将糖人所有的糖进行统计，若满足结束要求则进入结束阶段。</li>
+</ol>
+</li>
+<li>结束阶段
+<ol>
+<li>若糖人的 <strong>最大个人持有方糖的数量</strong> 超过阈值，或 <strong>回合数</strong> 达到最大值，则进入结束阶段。</li>
+<li>输出统计图表，包括糖人的最终位置、所有糖人的状态（ <strong>存活</strong> 或 <strong>死亡</strong> ）、存活糖人的方糖最终持有量。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>数据结构控制</p>
+<ol>
+<li>场地，SugarSocialExp.Block[ ][ ]</li>
+<li>方糖分布，int SugarSocialExp.Block.product</li>
+<li>糖人，List&lt; SugarSocialExp.Role &gt;</li>
+<li>糖人位置，List &lt; SugarSocialExp.V2 &gt;</li>
+<li>糖人状态，int SugarSocialExp.Role.status</li>
+<li>当前场上最富有的糖人，SugarSocialExp.Role</li>
+<li>回合数，int</li>
+<li>胜者的方糖最终持有量，List&lt; Integer &gt;</li>
+</ol>
+</li>
+<li>
+<p>类控制</p>
+<ol>
+<li>SugarSocialExp.Block
+<ul>
+<li><strong>final int</strong> product</li>
+<li><strong>final SugarSocialExp.V2</strong> position</li>
+<li>SugarSocialExp.Block(int product, SugarSocialExp.V2 position)</li>
+<li>SugarSocialExp.Block(int product, int x, int y)</li>
+<li><strong>String</strong> toString()</li>
+</ul>
+</li>
+<li>SugarSocialExp.Role
+<ul>
+<li><strong>SugarSocialExp.V2</strong> position</li>
+<li><strong>int</strong> status</li>
+<li><strong>int</strong> sugar</li>
+<li><strong>final int</strong> mouth</li>
+<li><strong>final int</strong> eye</li>
+<li>SugarSocialExp.Role(SugarSocialExp.V2 position, int mouth, int eye)</li>
+<li>SugarSocialExp.Role(int x, int y, int mouth, int eye)</li>
+<li><strong>void</strong> earn(int product)</li>
+<li><strong>boolean</strong> eat()</li>
+<li><strong>boolean</strong> earnAndEat(int product)</li>
+<li><strong>String</strong> toString()</li>
+</ul>
+</li>
+<li>SugarSocialExp.V2
+<ul>
+<li><strong>int</strong> x</li>
+<li><strong>int</strong> y</li>
+<li>SugarSocialExp.V2(int x, int y)</li>
+<li><strong>String</strong> toString()</li>
+</ul>
+</li>
+<li>SugarSocialExp.VisibleGenerator extends JFrame
+<ul>
+<li>//TODO</li>
+</ul>
+</li>
+<li>SugarSocialExp.Model
+<ul>
+<li><strong>SugarSocialExp.Block[ ][ ]</strong> square</li>
+<li><strong>int[ ][ ]</strong> productions</li>
+<li><strong>List&lt; SugarSocialExp.Role &gt;</strong> humanList</li>
+<li><strong>List&lt; SugarSocialExp.V2 &gt;</strong> Locations</li>
+<li><strong>int[ ]</strong> statuses</li>
+<li><strong>SugarSocialExp.Role</strong> richest</li>
+<li><strong>int</strong> round</li>
+<li><strong>List&lt; SugarSocialExp.V2 &gt;</strong> resultList // x = status, y = sugar</li>
+<li><strong>final int</strong> maxEyeAbility</li>
+<li><strong>final int</strong> maxProductAbility</li>
+<li><strong>final int</strong> size</li>
+<li>SugarSocialExp.Model(int maxEye, int maxProduct, int size)</li>
+<li><strong>void</strong> init()</li>
+<li><strong>void</strong> initSquare()</li>
+<li><strong>void</strong> intiProductions()</li>
+<li><strong>void</strong> initHumanList()</li>
+<li><strong>void</strong> initLocations()</li>
+<li><strong>void</strong> oneTurnToEarn()</li>
+<li><strong>void</strong> oneTurnToMove()</li>
+<li><strong>void</strong> oneTurnToEat()</li>
+<li><strong>List&lt; SugarSocialExp.V2 &gt;</strong> getAllHumanLocation()</li>
+<li><strong>List&lt; SugarSocialExp.V2 &gt;</strong> getLiveHumanLocation()</li>
+<li><strong>List&lt; SugarSocialExp.V2 &gt;</strong> getDeadHumanLocation()</li>
+<li><strong>int[ ][ ]</strong> getProductions()</li>
+<li><strong>SugarSocialExp.Role</strong> getTheRichest()</li>
+<li><strong>List&lt; SugarSocialExp.V2 &gt;</strong> getResultList()</li>
+<li><strong>SugarSocialExp.Model</strong> start(int maxRound)</li>
+<li><strong>String</strong> toString()</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>Main
+<ul>
+<li><strong>public static void</strong> main(String[] args)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div><script>    const previewElement = document.getElementById('preview');    Vditor.setContentTheme('idea-light', 'https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor/dist/css/content-theme');    Vditor.codeRender(previewElement);    Vditor.highlightRender({"enable":true,"lineNumber":false,"style":"dracula"}, previewElement, 'https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor');    Vditor.mathRender(previewElement, { cdn: 'https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor',math: {"engine":"KaTeX","inlineDigit":true,"macros":{}}});    Vditor.mermaidRender(previewElement, 'https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor', 'light');    Vditor.flowchartRender(previewElement, 'https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor');    Vditor.graphvizRender(previewElement, 'https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor');    Vditor.chartRender(previewElement, 'https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor', 'light');    Vditor.mindmapRender(previewElement, 'https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor', 'light');    Vditor.abcRender(previewElement, 'https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor');    Vditor.mediaRender(previewElement);    Vditor.speechRender(previewElement); </script>  <script src="https://cdn.jsdelivr.net/gh/shuzijun/markdown-editor@1.12/src/main/resources/vditor/dist/js/icons/ant.js"></script></body></html>
